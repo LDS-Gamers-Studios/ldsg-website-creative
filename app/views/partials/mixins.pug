@@ -96,3 +96,33 @@ mixin svg(id, classname)
   else
     svg
       use(xlink:href=id)
+
+mixin checkbox(id, label, checked = false, extra, className)
+  .checkbox(class=className)
+    if checked == true
+      input(type='checkbox', id=id, checked="checked")
+    else
+      input(type='checkbox', id=id)
+    label(for=id)
+      if label
+        span.label-container= label
+          if extra
+            em= extra
+            
+mixin radio(id, group, label, checked = false)
+  .radio(class=statusClass)
+    if checked == true
+      input(type='radio', name=group, id=id, checked="checked")
+    else
+      input(type='radio', name=group, id=id)
+    label(for=id)
+      span.label-container
+        span.inner= label
+
+mixin toggle(id, check = false, disabled=false, hasCheck=false)
+  - var checkClass = hasCheck ? 'has-check' : '';
+  .toggle(class=checkClass)
+    input(type="checkbox", id=id, checked=check, disabled=disabled)
+    label(for=id)
+    if hasCheck
+      span.check

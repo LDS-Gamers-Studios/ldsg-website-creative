@@ -45,7 +45,9 @@ function optimiseimg(){
 
 function compilePug() {
   return src('./app/views/pages/**/*.pug')
-    .pipe(pug())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(dest('./build'))
     .pipe(connect.reload())
 }

@@ -1,8 +1,8 @@
 {
-  "name": "vanilla5",
-  "version": "3.1",
-  "author": "Chris Bishop <mechwd@msn.com> (http://cibgraphics.com)",
-  "description": "HTML5 based foundation to kickstart the majority of your projects",
+  "name": "LDSG Creative",
+  "version": "1.0",
+  "author": "Chris Bishop <cbishop@cibgraphics.com> (http://cibgraphics.com)",
+  "description": "Creative site for LDSG",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cibgraphics/Vanilla5.git"
