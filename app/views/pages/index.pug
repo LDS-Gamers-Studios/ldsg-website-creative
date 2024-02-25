@@ -16,3 +16,22 @@ block content
         input(type="button" value="Button").button
       p
         button.button Button
+
+      +input('General Label', 'general-input')
+
+      .field
+        +checkbox('test', 'This is a default checkbox')
+        +checkbox('test2', 'This is a checked checkbox', true)
+
+      .field
+        +radio('test3', 'myGroup', 'This is a default radio')
+        +radio('test4', 'myGroup', 'This is a checked radio', true)
+
+      select.field
+        option() Hello World
+        option() Hello. There
+ 
+      .field
+        +toggle('toggle-test', false) 
+      .field
+        +toggle('toggle-test-2', false, false, true) 

@@ -106,6 +106,14 @@ Please use autoprefixer
   transform: translate($x, $y);
 }
 
+@mixin translateX($x: 0) {
+  transform: translateX($x);
+}
+
+@mixin translateY($y: 0) {
+  transform: translateY($y);
+}
+
 // Skew
 @mixin skew($x: 0, $y: 0) {
   transform: skew($x, $y);

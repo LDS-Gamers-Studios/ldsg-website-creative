@@ -82,12 +82,10 @@ mixin year-dropdown-down()
     - for (x = 2021; x > 1900; x--)
       option(value=x)= x 
 
-
 mixin county-dropdown()
   select
     option(value="United States") United States
     option(value="Canada") Cananda
-
 
 mixin svg(id, classname)
   if classname
@@ -96,6 +94,24 @@ mixin svg(id, classname)
   else
     svg
       use(xlink:href=id)
+
+mixin input(label, id='', type='text', value, error, disabledStatus = false, customClass, prefix, suffix, fieldClass)
+  - var errorClass = error ? 'has-error' : '';
+  - var disabled = disabledStatus ? 'disabled' : '';
+
+  .field(class= errorClass class= disabled class= fieldClass)
+    unless label == ''
+      label= label
+    .inner-field
+      if prefix
+        .addon.prefix
+          i(class= 'icon-' + prefix)
+      input(type=type value=value class=errorClass class=customClass disabled=disabledStatus id=id)
+      if suffix
+        .addon.suffix
+          i.input-icon(class='icon-' + suffix) 
+    if error
+      p.error-message= error
 
 mixin checkbox(id, label, checked = false, extra, className)
   .checkbox(class=className)

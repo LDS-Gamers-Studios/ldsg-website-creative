@@ -14,7 +14,7 @@ BUTTONS
   background: var(--primary);
   color: var(--white);
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 11px 24px;
   text-align: center;
   width: auto;
   border-radius: var(--radius);
@@ -23,6 +23,10 @@ BUTTONS
 
   &:hover {
     background: var(--orange-dark);
+  }
+
+  &:focus-visible {
+    @extend %focus;
   }
 }
 
