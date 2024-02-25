@@ -6,5 +6,13 @@ MASTHEAD
 
 
 .site-masthead {
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
 
+.site-nav {
+  margin-inline-start: auto;
 }

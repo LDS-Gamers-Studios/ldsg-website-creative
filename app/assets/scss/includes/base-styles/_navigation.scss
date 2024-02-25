@@ -1,0 +1,30 @@
+/*
+-----------------------------------------
+NAVIGATION
+-----------------------------------------
+*/
+
+.site-nav {
+  --nav-gap-spacing: 32px;
+  --nav-padding-inline: 8px;
+  --nav-padding-block: 8px;
+
+  ul {
+    display: flex;
+    gap: calc(var(--nav-gap-spacing) - (var(--nav-padding-inline) * 2));
+  }
+
+  li, a {
+    @include rem-size(20px);
+    color: var(--text-color);
+  }
+
+  a {
+    text-decoration: none;
+    padding: var(--nav-padding-block) var(--nav-padding-inline);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
