@@ -1,0 +1,31 @@
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--site-width);
+  text-align: center;
+  margin: 48px auto 64px;
+  max-width: 700px;
+
+  @include mq('tablet') {
+    .text-header--1 {
+      @include rem-size(48px);
+      margin-block-end: 24px;
+      line-height: 1.4em;
+    }
+
+    p {
+      @include rem-size(22px);
+    }
+  }
+}
+
+.hero-divider{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}

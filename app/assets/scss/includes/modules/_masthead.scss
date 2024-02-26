@@ -29,7 +29,6 @@ MASTHEAD
 .hero {
   background: var(--gray);
   position: relative;
-  min-height: 500px;
 
   &::after {
     content: '';
@@ -42,7 +41,7 @@ MASTHEAD
   }
 }
 
-#backgroundVideo {
+.backgroundVideo {
   position: absolute;
   left: 50%;
   top: 50%;

@@ -69,3 +69,21 @@ hr {
 .text-header--6 {
   @include rem-size(18px);
 }
+
+
+
+.type-white {
+  .text-header--1,
+  .text-header--2,
+  .text-header--3,
+  .text-header--4,
+  .text-header--5,
+  .text-header--6,
+  p, li {
+    color: var(--white)
+  }
+}
+
+.text-primary {
+  color: var(--primary);
+}
