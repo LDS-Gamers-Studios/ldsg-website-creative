@@ -27,4 +27,16 @@ NAVIGATION
       color: var(--primary);
     }
   }
+
+  .hero & {
+    li, a {
+      color: var(--white);
+    }
+
+    a {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
 }

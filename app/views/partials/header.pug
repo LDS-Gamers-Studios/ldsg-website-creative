@@ -1,19 +1,7 @@
-header.site-masthead.container
+- var mastheadClass = pageID == "homepage" ? 'hero' : '';
+header.site-masthead.container(class=mastheadClass)
+  if pageID == "homepage"
+    video#backgroundVideo(autoplay='' muted='' loop='' poster="/assets/images/homepage/family-playing-games-together.png")
+      source(src='rain.mp4' type='video/mp4')
   .content
-
-    .site-logo
-      a(href="/")
-        img(src="/assets/images/theme/logos/ldsg-logo-horz.svg" alt="LDS Gamers Logo")
-      
-    nav.site-nav
-      ul.list-unstyled
-        li
-          a(href="/about") About
-        li
-          a(href="/articles") Articles
-        li
-          a(href="/community-events") Community Events
-        li
-          a(href="/game-servers") Game Servers
-        li
-          a(href="/contact") Contact Us
+    include header-content.pug
