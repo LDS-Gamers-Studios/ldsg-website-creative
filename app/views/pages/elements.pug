@@ -1,0 +1,38 @@
+extends ../layouts/layout.pug
+
+block vars
+  - pageID = "homepage";
+
+block content
+  section.container
+    .content
+      h1.text-header--1 Header 1
+      h2.text-header--2 Header 2
+      h3.text-header--3 Header 3
+      h4.text-header--4 Header 4
+      h5.text-header--5 Header 5
+      h6.text-header--6 Header 6
+      p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      p
+        a(href="#0").button Button
+      p
+        input(type="button" value="Button").button
+      p
+        button.button Button
+
+      +input('General Label', 'general-input')
+
+      .field
+        +checkbox('test', 'This is a default checkbox')
+        +checkbox('test2', 'This is a checked checkbox', true)
+
+      .field
+        +radio('test3', 'myGroup', 'This is a default radio')
+        +radio('test4', 'myGroup', 'This is a checked radio', true)
+
+      select.field
+        option() Hello World
+        option() Hello. There
+ 
+      .field
+        +toggle('toggle-test', false) 

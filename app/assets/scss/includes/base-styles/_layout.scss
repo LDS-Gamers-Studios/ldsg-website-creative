@@ -72,19 +72,24 @@ $baseSize: 0;
 
 
 main {
-  padding: 24px 0;
+  padding: 48px 0 32px;
   background: var(--content-background);
 }
 
 .container {
   padding: 0 20px;
   background: var(--content-background);
+
+  &.gray {
+    background: var(--gray);
+  }
 }
 
 .content {
   max-width: var(--site-width);
   margin: 0 auto;
   position: relative;
+  padding: 64px 0;
 }
 
 
