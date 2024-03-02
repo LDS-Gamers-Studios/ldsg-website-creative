@@ -2,9 +2,10 @@
 header.site-masthead.container(class=mastheadClass)
   if pageID == "homepage"
     video.backgroundVideo(autoplay='' muted='' loop='' poster="/assets/images/homepage/family-playing-games-together.png")
-      source(src='rain.mp4' type='video/mp4')
+      source(src='/assets/images/homepage/family-playing-games-together.mp4' type='video/mp4')
+      source(src='/assets/images/homepage/family-playing-games-together.webm' type='video/webm')
     include hero-divider
-    
+
   .content
     include header-content.pug
 
