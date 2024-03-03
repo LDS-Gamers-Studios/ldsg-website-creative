@@ -62,6 +62,53 @@
 
 
 
+/* Recent Article*/
+
+
+.recent-article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin-inline: auto;
+
+  .article-image {
+    margin-inline: auto;
+
+    img {
+      border: 4px solid var(--white);
+      border-radius: var(--radius);
+    }
+  }
+
+  .article-intro {
+    text-align: center;
+    max-width: 550px;
+    margin-inline: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @include mq('desktop-small') {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+
+    .article-image {
+      min-width: 550px;
+    }
+
+    .article-intro {
+      text-align: left;
+    }
+  }
+}
+
+
+/* FAQs*/
+
 .faqs {
   --gap: 24px;
   --number-width: 20px;
