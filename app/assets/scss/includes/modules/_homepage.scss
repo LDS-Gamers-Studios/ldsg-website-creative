@@ -70,17 +70,23 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 950px;
+  margin-inline: auto;
 
   li {
     background: var(--off-white);
     border-radius: var(--radius);
   }
 
+  button {
+    width: 100%;
+    cursor: pointer;
+  }
+
   .question {
     padding: var(--item-padding);
     display: flex;
     gap: 24px;
-    cursor: pointer;
 
     .number {
       @include rem-size(20px);
@@ -88,15 +94,32 @@
       color: var(--gray-med);
       width: var(--number-width);
       flex-shrink: 0;
+      align-self: flex-start;
     }
 
     h3 {
       flex: 1;
+      align-self: center;
+    }
+
+    .faq-icon {
+      height: 24px;
+      width: 24px;
+      fill: var(--primary);
+
+      &.collapse {
+        fill: var(--gray);
+      }
     }
   }
 
   .answer {
-    padding: 0 var(--item-padding) var(--item-padding) calc(var(--gap) + var(--number-width) + var(--item-padding));
-    // display: none;
+    max-height: 0;
+    overflow: hidden;
+    @include transition();
+
+    .inner {
+      padding: 0 var(--item-padding) var(--item-padding) calc(var(--gap) + var(--number-width) + var(--item-padding));
+    }
   }
 }

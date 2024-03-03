@@ -5,6 +5,22 @@ BUTTONS
 */
 
 
+.no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font);
+  text-align: left;
+
+  &.no-desktop-focus {
+    @include mq('tablet') {
+      visibility: hidden;
+    }
+  }
+}
+
+
 .button {
   cursor: pointer;
   display: inline-flex;

@@ -35,6 +35,12 @@
     <link href="/assets/css/print.css" rel="stylesheet" media="print">
   </head>
   <body id="top">
+    <div style="display: none"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-add" viewBox="0 0 32 32"><g fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM17 16.998H23V14.998H17V8.998H15V14.998H9V16.998H15V22.998H17V16.998Z" fill="#F89A22"/>
+</g></symbol><symbol id="icon-subtract" viewBox="0 0 32 33"><g fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.9707C24.8366 32.9707 32 25.8073 32 16.9707C32 8.13415 24.8366 0.970703 16 0.970703C7.16344 0.970703 0 8.13415 0 16.9707C0 25.8073 7.16344 32.9707 16 32.9707ZM17.4128 16.9693L21.6555 12.7266L20.2412 11.3124L15.9986 15.5551L11.756 11.3124L10.3417 12.7266L14.5844 16.9693L10.3417 21.2119L11.756 22.6261L15.9986 18.3835L20.2412 22.6261L21.6555 21.2119L17.4128 16.9693Z" fill="#4A4A4A"/>
+</g></symbol></svg>
+    </div>
     <header class="site-masthead container hero">
       <video class="backgroundVideo" autoplay="" muted="" loop="" poster="/assets/images/homepage/family-playing-games-together.png">
         <source src="/assets/images/homepage/family-playing-games-together.mp4" type="video/mp4">
@@ -117,59 +123,144 @@
       </section>
       <section class="container">
         <div class="content">
+          <h2 class="text-center mb-48"><span class="text-primary">Common </span>FAQ</h2>
           <ol class="faqs list-unstyled">
-            <li>
-              <div class="question">
-                <div class="number">0<span>1</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
-              </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-              </div>
-            </li>
-            <li>
-              <div class="question">
-                <div class="number">0<span>2</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
-              </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-              </div>
-            </li>
-            <li>
-              <div class="question">
-                <div class="number">0<span>3</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
-              </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-1" @click="selected !== 1 ? selected = 1 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>1</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 1">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 1">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-1" x-ref="answer1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.answer1.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
               </div>
             </li>
-            <li>
-              <div class="question">
-                <div class="number">0<span>4</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
-              </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-2" @click="selected !== 2 ? selected = 2 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>2</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 2">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 2">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-2" x-ref="answer2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.answer2.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
               </div>
             </li>
-            <li>
-              <div class="question">
-                <div class="number">0<span>5</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
-              </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-3" @click="selected !== 3 ? selected = 3 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>3</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 3">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 3">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-3" x-ref="answer3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.answer3.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
               </div>
             </li>
-            <li>
-              <div class="question">
-                <div class="number">0<span>6</span></div>
-                <h3 class="text-header--5">What is LDS Gamers?</h3>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-4" @click="selected !== 4 ? selected = 4 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>4</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 4">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 4">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-4" x-ref="answer4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.answer4.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
               </div>
-              <div class="answer">
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </li>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-5" @click="selected !== 5 ? selected = 5 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>5</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 5">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 5">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-5" x-ref="answer5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.answer5.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
+              </div>
+            </li>
+            <li x-data="{selected:null}">
+              <button class="no-style" aria-expanded="false" aria-controls="answer-6" @click="selected !== 6 ? selected = 6 : selected = null">
+                <div class="question">
+                  <div class="number">0<span>6</span></div>
+                  <h3 class="text-header--5">What is LDS Gamers?</h3>
+                  <div class="icon" x-show="selected != 6">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-add"></use>
+                    </svg>
+                  </div>
+                  <div class="icon" x-show="selected == 6">
+                    <svg class="faq-icon">
+                      <use xlink:href="#icon-subtract"></use>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div class="answer" role="region" id="answer-6" x-ref="answer6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.answer6.scrollHeight + 'px' : ''">
+                <div class="inner">
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                </div>
               </div>
             </li>
           </ol>
@@ -179,6 +270,7 @@
     <footer class="site-footer">
       <p></p>
     </footer>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer=""></script>
     <!-- Load jQuery from CDN. If CDN is not available, load from local copy-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -186,7 +278,7 @@
       
     </script>
     <!-- Custom JS-->
-    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/app.min.js"></script>
     <!-- Google Anayltics - Modify to enter your tracking code-->
     <script src="assets/js/lib/google-analytics.js"></script>
   </body>

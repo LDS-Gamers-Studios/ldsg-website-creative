@@ -23,12 +23,22 @@ block content
   section.container
     .content
 
+      h2.text-center.mb-48
+        span.text-primary Common 
+        | FAQ
+
       ol.faqs.list-unstyled
         -for(x=1; x<=6; x++)
-          li
-            .question
-              .number 0
-                span=x
-              h3.text-header--5 What is LDS Gamers?
-            .answer
-              p Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          li(x-data="{selected:null}")
+            button.no-style(aria-expanded="false" aria-controls="answer-" + x @click="selected !== " + x + " ? selected = " + x + " : selected = null")
+              .question
+                .number 0
+                  span=x
+                h3.text-header--5 What is LDS Gamers?
+                .icon(x-show = "selected != " + x)
+                  +svg('#icon-add', 'faq-icon')
+                .icon(x-show = "selected == " + x)
+                  +svg('#icon-subtract', 'faq-icon')
+            .answer(role="region" id="answer-" + x x-ref="answer" + x  x-bind:style="selected == " + x + " ? 'max-height: ' + $refs.answer" + x + ".scrollHeight + 'px' : ''")
+              .inner
+                p Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
