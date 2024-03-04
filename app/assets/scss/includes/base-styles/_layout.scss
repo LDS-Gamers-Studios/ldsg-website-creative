@@ -79,6 +79,7 @@ main {
 .container {
   padding: 0 20px;
   background: var(--content-background);
+  position: relative;
 
   &.gray {
     background: var(--gray);
@@ -90,6 +91,10 @@ main {
   margin: 0 auto;
   position: relative;
   padding: 64px 0;
+
+  &.mw-1200 {
+    max-width: 1200px;
+  }
 }
 
 

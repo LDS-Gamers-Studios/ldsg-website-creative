@@ -52,6 +52,16 @@
     background: var(--off-white);
     border-radius: var(--radius);
     margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 54px;
+      height: 54px;
+      fill: var(--primary);
+
+    }
   }
 
   h3 {
@@ -69,8 +79,9 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 1200px;
   margin-inline: auto;
+  position: relative;
+  z-index: 2;
 
   .article-image {
     margin-inline: auto;
@@ -97,15 +108,56 @@
     gap: 60px;
 
     .article-image {
-      min-width: 550px;
+      max-width: 550px;
+      width: 100%;
+      margin-inline: 0;
     }
 
     .article-intro {
       text-align: left;
+      flex: 1;
+      margin-inline: 0;
     }
   }
 }
 
+.orange-side {
+  position: relative;
+
+  .content {
+    z-index: 2;
+  }
+
+
+  @include mq('desktop-small') {
+    .orange-background {
+      background-color: var(--primary); 
+      display: block;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: calc(100% - (1200px - 400px));
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        bottom: 0;
+        right: -100px;
+        width: 100px;
+        background: var(--primary);
+        // background: red;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        z-index: 2;
+        transform: translateX(-1px);
+      }
+    }
+  }
+}
 
 /* FAQs*/
 

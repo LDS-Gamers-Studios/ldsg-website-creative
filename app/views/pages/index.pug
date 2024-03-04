@@ -14,11 +14,13 @@ block content
         -for(x=0; x<6; x++)
           li
             .icon
+              +svg('#icon-headset')
             h3.text-header--5 Clean Multiplayer Experience
             p Tired of the constant profanity? Have some control over the voices you allow into your home! Game with those that share your values and interests!
 
-  section.container.gray.type-white
-    .content
+  section.container.gray.type-white.orange-side
+    .orange-background
+    .content.mw-1200
       .recent-article
         .article-image
           a(href="#0")
@@ -49,7 +51,7 @@ block content
                 .icon(x-show = "selected != " + x)
                   +svg('#icon-add', 'faq-icon')
                 .icon(x-show = "selected == " + x)
-                  +svg('#icon-subtract', 'faq-icon')
+                  +svg('#icon-subtract', 'faq-icon collapse')
             .answer(role="region" id="answer-" + x x-ref="answer" + x  x-bind:style="selected == " + x + " ? 'max-height: ' + $refs.answer" + x + ".scrollHeight + 'px' : ''")
               .inner
                 p Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.

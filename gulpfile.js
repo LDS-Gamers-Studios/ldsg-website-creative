@@ -12,6 +12,7 @@ const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const connect = require('gulp-connect');
+const cheerio = require('gulp-cheerio');
 
 
 // Create Functions
@@ -54,6 +55,14 @@ function compilePug() {
 
 function svgMap() {
   return src('./app/assets/svg/*.svg')
+    .pipe(cheerio({
+      run: ($) => {
+        $('[fill]').removeAttr('fill');
+        $('[class]').removeAttr('class');
+        $('[style]').removeAttr('style');            
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(rename({prefix: 'icon-'}))
     .pipe(svgstore())
     .pipe(rename({

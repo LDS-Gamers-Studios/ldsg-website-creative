@@ -27,5 +27,8 @@
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
     "sass": "^1.59.3"
+  },
+  "dependencies": {
+    "gulp-cheerio": "^1.0.0"
   }
 }

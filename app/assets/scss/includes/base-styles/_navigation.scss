@@ -10,7 +10,7 @@ NAVIGATION
   --nav-padding-block: 8px;
 
   ul {
-    display: flex;
+    display: none;
     gap: calc(var(--nav-gap-spacing) - (var(--nav-padding-inline) * 2));
   }
 
@@ -38,5 +38,25 @@ NAVIGATION
         color: var(--primary);
       }
     }
+  }
+
+  @include mq('desktop-small') {
+    ul {
+      display: flex;
+    }
+  }
+}
+
+
+
+.nav-icon {
+  svg {
+    fill: var(--white);
+    width: 40px;
+    height: 40px;
+  }
+
+  @include mq('desktop-small') {
+    display: none;
   }
 }
