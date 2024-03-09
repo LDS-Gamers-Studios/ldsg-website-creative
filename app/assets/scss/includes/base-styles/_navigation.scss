@@ -60,3 +60,32 @@ NAVIGATION
     display: none;
   }
 }
+
+
+
+
+.footer-nav {
+  margin-bottom: 32px;
+  li {
+    @include rem-size(14px);
+    margin-bottom: 0;
+  }
+
+  a {
+    padding: 8px 0;
+    display: block;
+    color: var(--text-color-light);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  @media (min-width: 36em) {
+    a {
+      text-align: left;
+    }
+  }
+}

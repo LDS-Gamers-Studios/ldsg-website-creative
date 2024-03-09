@@ -29,6 +29,7 @@ HEAD TAGS
 
 html, body {
   min-height: 100vh;
+  background: var(--base-color);
 }
 
 html {
@@ -40,7 +41,6 @@ html {
 }
 
 body {
-  background: var(--base-color);
   -webkit-font-smoothing: antialiased;
 }
 

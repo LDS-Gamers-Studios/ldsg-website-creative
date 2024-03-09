@@ -1,2 +1,50 @@
-footer.site-footer
-  p
+.container.gray.type-white.donate-container
+  .content
+    .donate
+      h2.text-header--3 Support LDS Gamers by Donating
+      a(href="#0").button Donate
+
+footer.container.site-footer.black.type-white
+  .content
+
+    .gridlex.footer-columns
+      .col-4_sm-6_xs-12
+        .footer-nav
+          ul.list-unstyled
+            li
+              a(href="#0") Home
+            include nav
+      .col-4_sm-6_xs-12
+        .footer-nav
+          ul.list-unstyled
+            li
+              a(href="/team") LDS Gamers Team
+            li
+              a(href="/media-kit") Media Kit
+            li
+              a(href="/style-guide") Style Guide
+            li
+              a(href="/code-of-conduct") Code of Conduct
+            
+      .col-4_sm-12
+        .social
+          ul.list-unstyled
+            li
+              a(href="#0")
+                +svg('#icon-facebook')
+            li
+              a(href="#0")
+                +svg('#icon-twitter')
+            li
+              a(href="#0")
+                +svg('#icon-facebook')
+            li
+              a(href="#0")
+                +svg('#icon-twitter')
+        a(href="#0").partner-stamp
+          img(src="/assets/images/theme/logos/humble-partners.png")
+
+    .legal
+      p © 2024 LDS Gamers, All rights reserved.
+      p LDS Gamers is not affiliated with nor endorsed by The Church of Jesus Christ of Latter-day Saints.
+      p The views expressed herein do not represent the official position of the Church.
