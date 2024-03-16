@@ -1,21 +1,3 @@
-- var mastheadClass = pageID == "homepage" ? 'hero' : '';
-header.site-masthead.container(class=mastheadClass)
-  if pageID == "homepage"
-    video.backgroundVideo(autoplay='' muted='' loop='' poster="/assets/images/homepage/family-playing-games-together.png")
-      source(src='/assets/images/homepage/family-playing-games-together.mp4' type='video/mp4')
-      source(src='/assets/images/homepage/family-playing-games-together.webm' type='video/webm')
-    include hero-divider
-
+header.site-masthead.container
   .content
     include header-content.pug
-
-  .hero-content.type-white
-    h1.text-header--1 The 
-      span.text-primary Family Friendly
-      br
-      |  Gaming Community
-
-    p Where gaming meets family values. Join our community dedicated to providing a safe and enjoyable gaming environment for all ages, where you can connect, compete, and create unforgettable memories together.
-
-    p
-      a(href="#0").button Join Us on Discord

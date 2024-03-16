@@ -12,6 +12,7 @@ const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const svgstore = require('gulp-svgstore');
 const connect = require('gulp-connect');
+const concat = require('gulp-concat');
 const cheerio = require('gulp-cheerio');
 
 
@@ -27,7 +28,8 @@ function compilescss(){
 }
 
 function jsmin(){
-  return src('./app/assets/js/app.js')
+  return src(['./app/assets/js/dep/**/*.js', './app/assets/js/lib/**/*.js', './app/assets/js/app.js'])
+    .pipe(concat('app.min.js'))
     .pipe(terser())
     .pipe(dest('./build/assets/js'))
     .pipe(connect.reload())

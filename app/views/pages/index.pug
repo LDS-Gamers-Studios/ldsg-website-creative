@@ -4,6 +4,36 @@ block vars
   - pageID = "homepage";
 
 block content
+  section.hero
+    .gaming-background#scene
+      .sky.parallax-layer
+        img(src="/assets/images/homepage/sky-1.svg" data-depth="0.2").layer
+      .clouds.parallax-layer
+        img(src="/assets/images/homepage/clouds-2.svg" data-depth="0.25").layer
+      .hills.parallax-layer
+        img(src="/assets/images/homepage/hills-3.svg" data-depth="0.3").layer
+      .hills-2.parallax-layer
+        img(src="/assets/images/homepage/hills-4.svg" data-depth="0.35").layer
+      .hills-3.parallax-layer
+        img(src="/assets/images/homepage/hills-5.svg" data-depth="0.4").layer
+      .bushes.parallax-layer
+        img(src="/assets/images/homepage/bushes-6.svg" data-depth="0.45").layer
+      .rocks.parallax-layer
+        img(src="/assets/images/homepage/rocks-7.svg" data-depth="0.5").layer
+      .ground.parallax-layer
+        img(src="/assets/images/homepage/ground-8.svg" data-depth="0.8").layer
+
+
+    include ../partials/hero-divider
+
+    .hero-content
+      h1.text-header--1 The Family Friendly
+        br
+        |  Gaming Community
+      p
+        a(href="#0").button Join Us on Discord
+
+
   section.container
     .content
       h2.text-center.mb-48
