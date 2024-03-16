@@ -27,18 +27,25 @@ MASTHEAD
 /* Hero */
 
 .hero {
-  background: #e2f7ff;
   position: relative;
   overflow: hidden;
   margin-top: -48px;
   height: 50vw;
+  min-height: 500px;
+  background: #e2f7ff url('/assets/images/homepage/classic1.png') no-repeat center;
+  background-size: cover;
+
+  @include mq('tablet') {
+    min-height: 0;
+    background-image: none;
+  }
 }
 
 
 .hero-content {
   position: absolute;
   width: 90%;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -49,7 +56,7 @@ MASTHEAD
   z-index: 4;
 
   .text-header--1 {
-    @include rem-size(20px);
+    @include rem-size(35px);
     line-height: 1.4em;
     font-weight: var(--bold);
     margin-block-end: 24px;
@@ -57,6 +64,7 @@ MASTHEAD
 
   @include mq('tablet') {
     top: 40%;
+    transform: translate(-50%, -50%);
 
     .text-header--1 {
       @include rem-size(48px);
@@ -87,9 +95,14 @@ MASTHEAD
 
 
 .gaming-background {
+  display: none;
   height: 100%;
   width: 100%;
   overflow: hidden;
+
+  @include mq('tablet') {
+    display: block;
+  }
 
   .parallax-layer {
     width: 100%;
