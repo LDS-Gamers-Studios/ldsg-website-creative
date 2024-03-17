@@ -3,7 +3,7 @@
     img(src="/assets/images/theme/logos/ldsg-logo-horz.svg" alt="LDS Gamers Logo")
   
 nav.site-nav
-  button.no-style.nav-icon
+  button.no-style.nav-icon(@click="show = true")
     +svg('#icon-menu')
   ul.list-unstyled
     include nav

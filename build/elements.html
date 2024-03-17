@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" x-data="{ show: false }">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -34,7 +34,8 @@
     <link href="/assets/css/style.css" rel="stylesheet" media="screen">
     <link href="/assets/css/print.css" rel="stylesheet" media="print">
   </head>
-  <body id="top">
+  <body id="top" :class="{ 'show-nav': show }">
+    <div class="overlay" @click="show = false"></div>
     <div style="display: none"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-add" viewBox="0 0 32 32">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32ZM17 16.998H23V14.998H17V8.998H15V14.998H9V16.998H15V22.998H17V16.998Z"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 41 40">
@@ -51,11 +52,25 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M28.653 15.9213C28.6605 16.0976 28.6656 16.2738 28.6656 16.4526C28.6656 21.8738 24.5097 28.1263 16.9104 28.1263C14.5769 28.1263 12.4059 27.4476 10.5771 26.2838C10.9006 26.3213 11.2291 26.3401 11.5626 26.3401C13.4983 26.3401 15.2792 25.6851 16.6939 24.5838C14.8853 24.5513 13.3599 23.3651 12.8338 21.7351C13.0868 21.7826 13.3448 21.8076 13.6116 21.8076C13.9879 21.8076 14.3529 21.7576 14.7003 21.6638C12.8099 21.2876 11.3864 19.6288 11.3864 17.6413C11.3864 17.6238 11.3864 17.6063 11.3864 17.5888C11.9427 17.8963 12.5808 18.0813 13.2579 18.1026C12.1491 17.3663 11.4191 16.1101 11.4191 14.6876C11.4191 13.9351 11.623 13.2301 11.9792 12.6238C14.0169 15.1063 17.0614 16.7401 20.4948 16.9113C20.4243 16.6113 20.3878 16.2976 20.3878 15.9763C20.3878 13.7101 22.238 11.8726 24.5185 11.8726C25.7079 11.8726 26.7815 12.3713 27.5341 13.1688C28.4755 12.9851 29.3603 12.6438 30.1583 12.1738C29.8499 13.1313 29.1942 13.9351 28.3421 14.4438C29.1778 14.3438 29.9732 14.1238 30.7146 13.7976C30.1608 14.6201 29.4597 15.3426 28.653 15.9213ZM0.508423 40H40.7832V0H0.508423V40Z"/>
 </symbol></svg>
     </div>
+    <div class="mobile-nav">
+      <button class="no-style close-nav-icon" @click="show = false">
+        <svg>
+          <use xlink:href="#icon-subtract"></use>
+        </svg>
+      </button>
+      <ul class="list-unstyled">
+        <li><a href="/about">About</a></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/community-events">Community Events</a></li>
+        <li><a href="/game-servers">Game Servers</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
     <header class="site-masthead container">
       <div class="content">
         <div class="site-logo"><a href="/"><img src="/assets/images/theme/logos/ldsg-logo-horz.svg" alt="LDS Gamers Logo"></a></div>
         <nav class="site-nav">
-          <button class="no-style nav-icon">
+          <button class="no-style nav-icon" @click="show = true">
             <svg>
               <use xlink:href="#icon-menu"></use>
             </svg>
@@ -180,7 +195,8 @@
                       <use xlink:href="#icon-twitter"></use>
                     </svg></a></li>
               </ul>
-            </div><a class="partner-stamp" href="#0"><img src="/assets/images/theme/logos/humble-partners.png"></a>
+            </div>
+            <div class="partner-link"><a class="partner-stamp" href="#0"><img src="/assets/images/theme/logos/humble-partners.png"></a></div>
           </div>
         </div>
         <div class="legal">
@@ -197,6 +213,7 @@
       window.jQuery || document.write('<script src="assets/js/req/jquery.js"><\\/script>')
       
     </script>
+    <script src="//unpkg.com/alpinejs" defer=""></script>
     <!-- Custom JS-->
     <script src="/assets/js/app.min.js"></script>
   </body>

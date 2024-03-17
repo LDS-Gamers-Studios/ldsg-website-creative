@@ -6,14 +6,16 @@ MASTHEAD
 
 
 .site-masthead {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   overflow: hidden;
 
   .content {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 24px 0;
+    padding: 12px 0;
     position: relative;
     z-index: 2;
   }
