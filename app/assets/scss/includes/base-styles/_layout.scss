@@ -88,6 +88,10 @@ main {
   &.black {
     background: var(--black);
   }
+
+  &.off-white {
+    background: var(--off-white);
+  }
 }
 
 .content {
@@ -101,7 +105,10 @@ main {
   }
 }
 
+.page-header {
+  text-align: center;
 
-.block-content {
-  margin-bottom: 20px;
+  .content {
+    padding-block: 0;
+  } 
 }

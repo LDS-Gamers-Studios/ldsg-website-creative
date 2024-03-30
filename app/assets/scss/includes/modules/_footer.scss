@@ -44,7 +44,8 @@ FOOTER
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   a {

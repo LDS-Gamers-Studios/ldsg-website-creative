@@ -1,0 +1,136 @@
+/*
+-----------------------------------------
+GAME SERVERS
+-----------------------------------------
+*/
+
+.server-list {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 48px;
+  grid-template-columns: 1fr;
+
+  @include mq('phone') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq('tablet-small') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    &:hover {
+      .image-container {
+        border-color: var(--primary);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.server-info {
+  display: flex;
+
+  > div {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.server-platform {
+  margin-left: auto;
+}
+
+.server-name {
+  h5 {
+    font-weight: normal;
+    margin-bottom: 4px;
+  }
+
+  p {
+    @include rem-size(12px);
+  }
+
+  .down-message {
+    color: var(--error);
+  }
+}
+
+.server-status {
+  svg {
+    display: block;
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+
+    &.status-up {
+      fill: var(--success);
+    }
+
+    &.status-down {
+      fill: var(--error);
+    }
+  }
+}
+
+
+.server-single-container {
+  .image-container {
+    display: inline-block;
+  }
+
+  h5 {
+    font-weight: normal;
+    margin-bottom: 8px;
+  }
+  
+
+  @include mq('tablet') {
+    display: flex;
+    align-items: flex-start;
+
+    .server-image {
+      width: 350px;
+      margin-right: 48px;
+    }
+
+    .server-content {
+      flex: 1;
+
+      h3 {
+        
+        margin-bottom: 24px;
+      }
+
+      .well {
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+.server-images {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+
+  @include mq('phone') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  li {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 0;
+  }
+}

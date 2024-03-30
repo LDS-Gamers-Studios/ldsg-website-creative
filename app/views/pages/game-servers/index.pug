@@ -1,0 +1,33 @@
+extends ../../layouts/layout.pug
+
+block vars
+
+block content
+  .container.page-header
+    .content
+      h1 Game Servers
+
+  section.container
+    .content
+
+      ul.server-list.list-unstyled
+        -for (x = 1; x <= 5; x++)
+          - var className = x == 3 ? 'status-down' : '';
+          li(class= className)
+            a(href="/game-servers/server.html")
+              .image-container
+                img(src="https://via.placeholder.com/500x300")
+              .server-info
+                .server-status
+                  if x == 3
+                    +svg('#icon-circle-warning', 'status-down')
+                  else
+                    +svg('#icon-check-circle', 'status-up')
+                .server-name
+                  h5 Server Name
+                  p Version: Latest
+                  if x == 3
+                    p.down-message This server is currently offline.
+                .server-platform
+                  .tags 
+                    .tag PC

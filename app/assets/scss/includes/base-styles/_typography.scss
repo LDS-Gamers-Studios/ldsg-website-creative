@@ -12,7 +12,7 @@ a {
   @include transition();
 
   &:hover {
-    
+    text-decoration: none;
   }
 }
 
@@ -35,6 +35,22 @@ hr {
 
 }
 
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1.2em;
+}
+
+li {
+  color: var(--text-color);
+  @include rem-size(16px);
+  margin-bottom: 12px;
+  line-height: 1.4em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 /* Headers */
 
@@ -48,6 +64,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.6;
   font-weight: var(--bold);
   color: var(--text-color);
+  margin-bottom: 1em;
 }
 
 .text-header--1, h1 {
@@ -91,4 +108,16 @@ h1, h2, h3, h4, h5, h6,
 
 .text-primary {
   color: var(--primary);
+}
+
+
+/* Tags */
+
+.tag {
+  @include rem-size(12px);
+  color: var(--white);
+  background: var(--gray);
+  display: inline-block;
+  border-radius: var(--radius);
+  padding: 2px 8px;
 }

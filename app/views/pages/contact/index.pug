@@ -1,0 +1,32 @@
+extends ../../layouts/layout.pug
+
+block vars
+
+block content
+  .container.page-header
+    .content
+      h1 Contact
+
+  section.container
+    .content
+
+      .gridlex-center
+        .col-8_sm-12
+
+          .mb-48
+            p If you have any questions or suggestions for LDS Gamers, please send us a note. We can also be contacted through our #general channel on 
+              a(href="#0") Discord
+              | .
+
+          .form-success
+            h4 Message Successfully Sent
+            p Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor.
+
+          form(action="")
+            +input('Name', 'text', false, false, 'Must enter a Name')
+            +input('Email', 'email')
+            +input('Discord Name (optional)', 'text')
+            +textarea('Message') 
+
+            .button-group.align-right
+              button.button Submit

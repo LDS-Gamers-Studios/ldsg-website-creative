@@ -30,17 +30,23 @@ label {
   display: block;
 }
 
-input {
+input, textarea {
   @extend %input;
   padding: 12px;
   color: var(--text);
   @include rem-size(18px);
   width: 100%;
   display: block;
+  font-family: var(--font);
+  line-height: 1.3;
 
   &:focus {
     @extend %focus;
   }
+}
+
+textarea {
+  min-height: 150px
 }
 
 .field {
@@ -57,6 +63,7 @@ select {
   color: var(--text);
   @include rem-size(18px);
   width: 100%;
+  line-height: 1.3;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi4wMDIiIGhlaWdodD0iNi45ODMiIHZpZXdCb3g9IjAgMCAxMi4wMDIgNi45ODMiPgogIDxwYXRoIGlkPSJQYXRoXzM4MyIgZGF0YS1uYW1lPSJQYXRoIDM4MyIgZD0iTTUuNi01LjY3N2EuNTY3LjU2NywwLDAsMCwuOCwwbDUuNDM3LTUuNTIyYS41NjMuNTYzLDAsMCwwLDAtLjhsLS4zMzMtLjMzM2EuNTYzLjU2MywwLDAsMC0uOCwwTDYtNy41MzNsLTQuNzA2LTQuOGEuNTYzLjU2MywwLDAsMC0uOCwwTC4xNjQtMTJhLjU2My41NjMsMCwwLDAsMCwuOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAxIDEyLjQ5MykiIGZpbGw9IiMzYTNhM2EiLz4KPC9zdmc+Cg==");
   background-repeat: no-repeat;
   background-position: right 12px top 50%;
@@ -389,5 +396,40 @@ select {
 
   .button-container {
     flex-shrink: 0;
+  }
+}
+
+
+
+
+
+/* Errors */
+
+.has-error {
+  border-color: var(--error);
+}
+
+.error-message {
+  @include rem-size(14px);
+  margin-block-start: 2px;
+}
+
+.error-message {
+  color: var(--error);
+}
+
+
+/* Success */
+
+.form-success {
+  margin-block-end: 32px;
+  padding: 24px;
+  background: #F1FCF3;
+  border-radius: var(--radius);
+  border: 1px solid var(--success);
+
+  h4 {
+    color: var(--success);
+    @extend %mb-8;
   }
 }

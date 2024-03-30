@@ -142,3 +142,18 @@ mixin toggle(id, check = false, disabled=false, hasCheck=false)
     label(for=id)
     if hasCheck
       span.check
+
+mixin select(label, selectClass)
+  .field
+    if label
+      label= label
+    .select-container
+        select(class= selectClass)
+          if block
+            block
+
+mixin textarea(label, placeholder, size)
+  .field
+    if label
+      label= label
+    textarea(placeholder=placeholder class=size)
