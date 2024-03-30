@@ -1,3 +1,55 @@
+/* Hero */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background: var(--primary);
+  margin-top: -48px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.hero-content {
+  .text-header--1 {
+    @include rem-size(35px);
+    line-height: 1.4em;
+    font-weight: var(--bold);
+    margin-block-end: 24px;
+  }
+
+  @include mq('tablet') {
+
+    .text-header--1 {
+      @include rem-size(48px);
+    }
+
+    p {
+      @include rem-size(22px);
+    }
+  }
+}
+
+.hero-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+  @include transition(height);
+
+  @include mq('phone') {
+    height: 72px;
+  }
+}
 
 
 
@@ -5,7 +57,7 @@
 .community-features {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 45px 90px;
+  grid-gap: 90px;
 
   li {
     text-align: center;
