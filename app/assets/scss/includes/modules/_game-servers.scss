@@ -27,6 +27,8 @@ GAME SERVERS
       border: 2px solid transparent;
       @include transition();
       @extend %mb-8;
+      border-radius: var(--radius);
+      overflow: hidden;
 
       img {
         display: block;
