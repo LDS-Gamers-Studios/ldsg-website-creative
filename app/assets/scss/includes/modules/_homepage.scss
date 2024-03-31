@@ -106,6 +106,14 @@
   position: relative;
   z-index: 2;
 
+  h2 {
+    @extend %mb-4;
+  }
+
+  h3 {
+    @extend %mb-16;
+  }
+
   .article-image {
     margin-inline: auto;
 
