@@ -18,29 +18,32 @@ GAME SERVERS
     grid-template-columns: repeat(3, 1fr);
   }
 
+  a {
+    text-decoration: none;
+  }
+
   li {
+    .image-container {
+      border: 2px solid transparent;
+      @include transition();
+      @extend %mb-8;
+
+      img {
+        display: block;
+      }
+    }
+
     &:hover {
       .image-container {
         border-color: var(--primary);
       }
     }
   }
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .server-info {
   display: flex;
-
-  > div {
-    margin-right: 12px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  gap: 12px;
 }
 
 .server-platform {
@@ -50,15 +53,17 @@ GAME SERVERS
 .server-name {
   h5 {
     font-weight: normal;
-    margin-bottom: 4px;
+    @extend %mb-0;
   }
 
   p {
     @include rem-size(12px);
+    @extend %mb-4;
   }
 
   .down-message {
     color: var(--error);
+    font-weight: var(--bold);
   }
 }
 

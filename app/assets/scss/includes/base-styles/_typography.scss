@@ -113,11 +113,17 @@ h1, h2, h3, h4, h5, h6,
 
 /* Tags */
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .tag {
-  @include rem-size(12px);
+  @include rem-size(14px);
   color: var(--white);
   background: var(--gray);
-  display: inline-block;
   border-radius: var(--radius);
-  padding: 2px 8px;
+  padding: 4px 8px;
+  line-height: 1;
 }
