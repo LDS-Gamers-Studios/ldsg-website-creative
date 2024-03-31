@@ -44,6 +44,16 @@ BUTTONS
   &:focus-visible {
     @extend %focus;
   }
+
+  &.dark {
+    background: var(--gray);
+    color: var(--white);
+
+    &:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+  }
 }
 
 
