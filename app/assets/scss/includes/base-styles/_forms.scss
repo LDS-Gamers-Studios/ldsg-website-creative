@@ -433,3 +433,16 @@ select {
     @extend %mb-8;
   }
 }
+
+
+
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+}
