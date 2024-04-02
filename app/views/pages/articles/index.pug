@@ -13,3 +13,26 @@ block content
       .search-container
         input(type="search")
         input(type="submit" value="Search Articles").button
+
+      ul.articles-list.list-unstyled
+        - for(x = 0; x < 10; x++)
+          li
+            a(href="/articles/article.html")
+              .article-thumbnail
+                if x == 3 || x == 6
+                  .banner Review
+                img(src="https://via.placeholder.com/700x350")
+              h2 Review: Ori and the Blind Forest
+
+              p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            .meta 
+              p 
+                date Nov 5, 2019
+                span.divider | 
+                a(href="#0") Reviews
+                span.divider |
+                a(href="#0") 3 Comments
+              p.author Written by: Caden
+
+      include ../../partials/pagination

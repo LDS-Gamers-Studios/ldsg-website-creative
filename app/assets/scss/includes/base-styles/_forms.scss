@@ -412,10 +412,8 @@ select {
 .error-message {
   @include rem-size(14px);
   margin-block-start: 2px;
-}
-
-.error-message {
   color: var(--error);
+  font-weight: var(--bold);
 }
 
 
@@ -441,7 +439,7 @@ select {
   display: flex;
   gap: 12px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   padding: 16px;
   background: var(--off-white);
   border-radius: var(--radius);
