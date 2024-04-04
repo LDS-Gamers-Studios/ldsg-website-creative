@@ -16,7 +16,7 @@ a {
   }
 }
 
-p {
+p, cite {
   @include rem-size($font-size);
   line-height: 1.6em;
   color: var(--text-color);
@@ -95,13 +95,13 @@ h1, h2, h3, h4, h5, h6,
 
 
 .type-white {
-  .text-header--1,
-  .text-header--2,
-  .text-header--3,
-  .text-header--4,
-  .text-header--5,
-  .text-header--6,
-  p, li {
+  .text-header--1, h1,
+  .text-header--2, h2,
+  .text-header--3, h3,
+  .text-header--4, h4,
+  .text-header--5, h5,
+  .text-header--6, h6,
+  p, li, cite {
     color: var(--white)
   }
 }
@@ -126,4 +126,23 @@ h1, h2, h3, h4, h5, h6,
   border-radius: var(--radius);
   padding: 4px 8px;
   line-height: 1;
+}
+
+
+blockquote {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border-radius: var(--radius);
+
+  p {
+    text-indent: -0.2em;
+  }
+}
+
+@supports (hanging-punctuation: first) {
+  blockquote  p{
+    text-indent: 0;
+    hanging-punctuation: first;
+  }
 }

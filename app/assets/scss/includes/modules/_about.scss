@@ -1,0 +1,34 @@
+.about-features {
+  li {
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      .graphic {
+        order: 2;
+      }
+    }
+
+    @include mq('tablet') {
+      display: flex;
+      gap: 34px;
+
+      .graphic {
+        min-width: 350px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .graphic {
+    text-align: center;
+    @extend %mb-24;
+  }
+
+  .text {
+    flex: 1;
+  }
+}
