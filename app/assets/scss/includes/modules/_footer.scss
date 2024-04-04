@@ -79,16 +79,20 @@ FOOTER
   }
 }
 
-.partner-stamp {
-  display: block;
-  text-align: center;
+.partner-link {
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: block;
+  }
 
   img {
     max-height: 60px;
   }
 
   @media (min-width: 48em) {
-    text-align: right;
+    justify-content: flex-end;
   }
 }
 
@@ -103,9 +107,4 @@ FOOTER
     text-align: center;
     margin-bottom: 0;
   }
-}
-
-.partner-link {
-  display: flex;
-  justify-content: flex-end;
 }
