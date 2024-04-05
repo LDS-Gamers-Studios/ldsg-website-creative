@@ -12,16 +12,25 @@ block content
 
       .search-container
         input(type="search")
-        input(type="submit" value="Search Articles").button
+        button.button(type="input") 
+          span.desktop Search Articles
+          span.mobile
+            +svg('#icon-search')
 
       ul.articles-list.list-unstyled
-        - for(x = 0; x < 10; x++)
-          li
+        - for(x = 0; x < 8; x++)
+          - var featuredClass = x == 0 ? 'featured' : '';
+          li(class=featuredClass)
             a(href="/articles/article.html")
               .article-thumbnail
                 if x == 3 || x == 6
-                  .banner Review
-                img(src="https://via.placeholder.com/700x350")
+                  .tags
+                    .tag Review
+                if x == 0
+                  .tags
+                    .tag Featured Article
+                    .tag Review
+                img(src="https://via.placeholder.com/800x400")
               h2 Review: Ori and the Blind Forest
 
               p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -33,6 +42,6 @@ block content
                 a(href="#0") Reviews
                 span.divider |
                 a(href="#0") 3 Comments
-              p.author Written by: Caden
+              p.author Written by: Mechwd
 
       include ../../partials/pagination

@@ -52,6 +52,8 @@
 <path d="M55.0488 21.0254H50.5314C49.7633 10.3691 40.8486 1.93359 30 1.93359C19.1514 1.93359 10.2367 10.3691 9.46863 21.0254H4.95117C2.22105 21.0254 0 23.2465 0 25.9766V35.4639C0 38.194 2.22105 40.415 4.95117 40.415H11.1718C12.1426 40.415 12.9296 39.628 12.9296 38.6572V22.7832V22.5196C12.9296 18.9732 14.017 15.6763 15.8754 12.9438C17.4773 13.9941 19.3379 14.5399 21.2186 14.5398C22.6893 14.5398 24.172 14.2065 25.5516 13.5212C26.9415 12.8306 28.4382 12.4805 29.9999 12.4805C31.5616 12.4805 33.0582 12.8306 34.4482 13.5212C37.5918 15.0831 41.2695 14.8155 44.1243 12.9438C45.9826 15.6763 47.0701 18.9732 47.0701 22.5196V22.7832V38.6572V44.541C47.0701 47.6336 44.8918 50.2253 41.9895 50.8668C41.2214 48.8932 39.3022 47.4902 37.0604 47.4902H33.5302C30.6143 47.4902 28.2421 49.8625 28.2421 52.7783C28.2421 55.6942 30.6143 58.0664 33.5302 58.0664H37.0604C39.4017 58.0664 41.3913 56.5363 42.085 54.424C46.89 53.7006 50.5859 49.5445 50.5859 44.541V40.415H55.0487C57.7788 40.415 59.9999 38.194 59.9999 35.4639V25.9766C60 23.2465 57.7789 21.0254 55.0488 21.0254ZM9.41402 36.8994H4.95117C4.15957 36.8994 3.51562 36.2555 3.51562 35.4639V25.9766C3.51562 25.185 4.15957 24.5411 4.95117 24.5411H9.41402V36.8994ZM36.0127 10.3727C34.1323 9.43852 32.1094 8.96484 30 8.96484C27.8907 8.96484 25.8679 9.43852 23.9875 10.3727C22.1109 11.305 19.9356 11.2174 18.1689 10.2264C21.2396 7.26996 25.4109 5.44922 30 5.44922C34.5891 5.44922 38.7605 7.26996 41.8311 10.2264C40.0645 11.2174 37.8892 11.305 36.0127 10.3727ZM37.0605 54.5508H33.5303C32.5529 54.5508 31.7578 53.7557 31.7578 52.7783C31.7578 51.801 32.5529 51.0059 33.5303 51.0059H37.0605C38.0379 51.0059 38.833 51.801 38.833 52.7783C38.833 53.7557 38.0379 54.5508 37.0605 54.5508ZM56.4844 35.4639C56.4844 36.2555 55.8404 36.8994 55.0488 36.8994H50.586V24.5411H55.0488C55.8404 24.5411 56.4844 25.185 56.4844 25.9766V35.4639Z"/>
 </symbol><symbol id="icon-menu" viewBox="0 0 24 24">
 <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z"/>
+</symbol><symbol id="icon-search" viewBox="0 0 24 24">
+<path d="M15.5 14H14.71L14.43 13.73C15.4439 12.554 16.0011 11.0527 16 9.5C16 8.21442 15.6188 6.95772 14.9046 5.8888C14.1903 4.81988 13.1752 3.98676 11.9874 3.49479C10.7997 3.00282 9.49279 2.87409 8.23192 3.1249C6.97104 3.3757 5.81285 3.99477 4.90381 4.90381C3.99477 5.81285 3.3757 6.97104 3.1249 8.23192C2.87409 9.49279 3.00282 10.7997 3.49479 11.9874C3.98676 13.1752 4.81988 14.1903 5.8888 14.9046C6.95772 15.6188 8.21442 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"/>
 </symbol><symbol id="icon-subtract" viewBox="0 0 32 33">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32.9707C24.8366 32.9707 32 25.8073 32 16.9707C32 8.13415 24.8366 0.970703 16 0.970703C7.16344 0.970703 0 8.13415 0 16.9707C0 25.8073 7.16344 32.9707 16 32.9707ZM17.4128 16.9693L21.6555 12.7266L20.2412 11.3124L15.9986 15.5551L11.756 11.3124L10.3417 12.7266L14.5844 16.9693L10.3417 21.2119L11.756 22.6261L15.9986 18.3835L20.2412 22.6261L21.6555 21.2119L17.4128 16.9693Z"/>
 </symbol><symbol id="icon-tower" viewBox="0 0 60 60">
@@ -103,11 +105,18 @@
         <div class="content">
           <div class="search-container">
             <input type="search">
-            <input class="button" type="submit" value="Search Articles">
+            <button class="button" type="input"> <span class="desktop">Search Articles</span><span class="mobile">
+                <svg>
+                  <use xlink:href="#icon-search"></use>
+                </svg></span></button>
           </div>
           <ul class="articles-list list-unstyled">
-            <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+            <li class="featured"><a href="/articles/article.html">
+                <div class="article-thumbnail">
+                  <div class="tags">
+                    <div class="tag">Featured Article</div>
+                    <div class="tag">Review</div>
+                  </div><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -115,11 +124,11 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+                <div class="article-thumbnail"><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -127,11 +136,11 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+                <div class="article-thumbnail"><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -139,12 +148,14 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
                 <div class="article-thumbnail">
-                  <div class="banner">Review</div><img src="https://via.placeholder.com/700x350">
+                  <div class="tags">
+                    <div class="tag">Review</div>
+                  </div><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -152,11 +163,11 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+                <div class="article-thumbnail"><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -164,11 +175,11 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+                <div class="article-thumbnail"><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -176,12 +187,14 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
                 <div class="article-thumbnail">
-                  <div class="banner">Review</div><img src="https://via.placeholder.com/700x350">
+                  <div class="tags">
+                    <div class="tag">Review</div>
+                  </div><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -189,11 +202,11 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
             <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
+                <div class="article-thumbnail"><img src="https://via.placeholder.com/800x400">
                 </div>
                 <h2>Review: Ori and the Blind Forest</h2>
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
@@ -201,31 +214,7 @@
                 <p> 
                   <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
                 </p>
-                <p class="author">Written by: Caden</p>
-              </div>
-            </li>
-            <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
-                </div>
-                <h2>Review: Ori and the Blind Forest</h2>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
-              <div class="meta"> 
-                <p> 
-                  <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
-                </p>
-                <p class="author">Written by: Caden</p>
-              </div>
-            </li>
-            <li><a href="/articles/article.html">
-                <div class="article-thumbnail"><img src="https://via.placeholder.com/700x350">
-                </div>
-                <h2>Review: Ori and the Blind Forest</h2>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></a>
-              <div class="meta"> 
-                <p> 
-                  <date>Nov 5, 2019</date><span class="divider">| </span><a href="#0">Reviews</a><span class="divider">|</span><a href="#0">3 Comments</a>
-                </p>
-                <p class="author">Written by: Caden</p>
+                <p class="author">Written by: Mechwd</p>
               </div>
             </li>
           </ul>
