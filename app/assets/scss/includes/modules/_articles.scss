@@ -27,6 +27,12 @@
         grid-column: span 2;
       }
     }
+
+    &:hover {
+      .article-thumbnail img {
+        border-color: var(--primary);
+      }
+    }
   }
 
   .article-thumbnail {
@@ -35,6 +41,8 @@
     overflow: hidden;
 
     img {
+      border: 2px solid transparent;
+      @include transition();
       border-radius: var(--radius);
     }
   }

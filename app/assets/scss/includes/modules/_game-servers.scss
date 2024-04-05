@@ -41,6 +41,14 @@ GAME SERVERS
       }
     }
   }
+
+  .tags {
+    position: static;
+
+    .tag {
+      box-shadow: none;
+    }
+  }
 }
 
 .server-info {

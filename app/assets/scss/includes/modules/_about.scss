@@ -26,6 +26,10 @@
   .graphic {
     text-align: center;
     @extend %mb-24;
+
+    img {
+      border-radius: var(--radius);
+    }
   }
 
   .text {

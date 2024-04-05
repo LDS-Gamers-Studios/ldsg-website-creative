@@ -110,6 +110,17 @@ h1, h2, h3, h4, h5, h6,
   color: var(--primary);
 }
 
+.primary-headers {
+  .text-header--1, h1,
+  .text-header--2, h2,
+  .text-header--3, h3,
+  .text-header--4, h4,
+  .text-header--5, h5,
+  .text-header--6, h6 {
+    color: var(--primary);
+  }
+}
+
 
 /* Tags */
 
