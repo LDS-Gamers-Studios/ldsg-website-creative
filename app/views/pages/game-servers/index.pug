@@ -11,23 +11,25 @@ block content
     .content
 
       ul.server-list.list-unstyled
-        -for (x = 1; x <= 5; x++)
-          - var className = x == 3 ? 'status-down' : '';
+        -for (x = 0; x < 2; x++)
+          - var className = x == 1 ? 'status-down' : '';
           li(class= className)
-            a(href="/game-servers/server.html")
-              .image-container
-                img(src="https://via.placeholder.com/500x300")
-              .server-info
+            .server-image
+              img(src="https://via.placeholder.com/750x400")
+              .tags 
+                .tag PC
+            .server-info
+              .server-title
                 .server-status
-                  if x == 3
+                  if x == 1
                     +svg('#icon-circle-warning', 'status-down')
                   else
                     +svg('#icon-check-circle', 'status-up')
                 .server-name
-                  h5 Server Name
-                  p Version: Latest
-                  if x == 3
+                  h3 Minecraft
+                  p Server URL: 
+                    strong jaxs.mynetgear.com
+                  if x == 1
                     p.down-message This server is currently offline.
-                .server-platform
-                  .tags 
-                    .tag PC
+              .server-details
+                p Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
