@@ -26,6 +26,38 @@ $(function() {
 
   }
 
+
+  // Dark mode for later!!
+
+  // const darkModeToggle = document.getElementById('darkModeToggle');
+  // const body = document.body;
+
+  // // Check if user preference is stored in localStorage
+  // let isDarkMode = localStorage.getItem('darkMode');
+
+  // // If user preference is not stored, determine initial dark mode based on time
+  // if (isDarkMode === null) {
+  //     const hour = new Date().getHours();
+  //     isDarkMode = hour < 7 || hour > 19; // Dark mode between 7pm and 7am
+  // }
+
+  // // Apply initial dark mode state
+  // if (isDarkMode === 'true') {
+  //     body.classList.add('dark-mode');
+  //     darkModeToggle.checked = true;
+  // }
+
+  // // Toggle dark mode
+  // darkModeToggle.addEventListener('change', () => {
+  //     if (darkModeToggle.checked) {
+  //         body.classList.add('dark-mode');
+  //         localStorage.setItem('darkMode', 'true');
+  //     } else {
+  //         body.classList.remove('dark-mode');
+  //         localStorage.setItem('darkMode', 'false');
+  //     }
+  // });
+
   
   
 });
